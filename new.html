@@ -1,0 +1,131 @@
+dom-list.html
+Who has access
+
+A
+
+System properties
+Type
+HTML
+Size
+2 KB
+Storage used
+2 KB
+Location
+dom
+Owner
+Vidhya Skill School
+Modified
+9:29 AM by Vidhya Skill School
+Opened
+2:33 PM by me
+Created
+9:31 AM
+Add a description
+Viewers can download
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        padding: 20px;
+        box-shadow: 0px 0px 2px 0px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+      }
+
+      .item > p {
+        font-size: 11px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .item-image {
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="list"></div>
+  </body>
+</html>
+
+<script>
+  const _listData = [
+    {
+      title: "Top Offers",
+      id: 1,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png",
+    },
+    {
+      title: "Grocery",
+      id: 2,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+    {
+      title: "Mobiles",
+      id: 3,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+    {
+      title: "Fashion",
+      id: 4,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+    {
+      title: "Electronics",
+      id: 5,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+    {
+      title: "Travel",
+      id: 6,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+    {
+      title: "Beauty, Toys & More",
+      id: 7,
+      img: "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
+    },
+  ];
+
+  const _listArr = [
+    "Top Offers",
+    "Grocery",
+    "Mobiles",
+    "Fashion",
+    "Electronics",
+    "Travel",
+    "Beauty, Toys & More",
+  ];
+
+  const listContainer = document.getElementById("list");
+
+  function createElements(data) {
+    const listItem = document.createElement("div");
+    listItem.innerHTML = `<div class="card item">
+        <img class="item-image" src=${data.img} />
+        <p>${data.title}</p>
+        </div>`;
+
+    return listItem;
+  }
+
+  for (let i = 0; i < _listData.length; i++) {
+    currentElement = _listData[i];
+
+    const newElement = createElements(currentElement);
+    listContainer.appendChild(newElement);
+  }
+</script>
