@@ -127,7 +127,7 @@
     <div id="item_list"></div>
     <div class="main_page">
         <div class="banner">               
-           <div class="banner_img"><img src="https://rukminim2.flixcart.com/flap/1688/280/image/4eeb81e1d637c24f.jpg?q=50" height="100%" width="100%"></div>
+           <div class="banner_img"><img src="/images/e8f7c5775a68ddc5.jpg" height="100%" width="100%"></div>
         </div>
         <div class="content_category">
             <div class="content_header">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content_body">
+            <div id="content_body1">
                 
             </div>
         </div>
@@ -162,7 +162,7 @@
                  </div>
              </div>
             </div>
-            <div class="content_body">
+            <div id="content_body2">
              
             </div>
         </div>
@@ -177,7 +177,7 @@
                  </div>
              </div>
             </div>
-            <div class="content_body">
+            <div id="content_body3">
              
             </div>
         </div>
@@ -674,7 +674,7 @@ Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms an
     const _list = [
         {
             title: "Top Offers",
-            id: "first",
+            id: 1,
             img: "https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100",
 
         },
@@ -746,6 +746,240 @@ Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms an
 
         const newElement = renderlist(currentElement);
         list_container.appendChild(newElement);
-    }  
+    } 
+    
+    const container1_list = [
+        {
+            id: 11, 
+            img: "/images/top_accessories.jpeg",
+            title: "Top Selling Accessories",   
+            discount: "Upto 80% Off",                 
+            products: "Cadbury, Mars & More",
+        },
+        {
+            id: 12, 
+            img: "/images/m-23771-0164-levi-s-original-imag5bh93bxyfz6y.jpeg",
+            title: "Best Of Brands!",   
+            discount: "Upto 80% Off",                 
+            products: "Cadbury, Mars & More",
+        },
+        {
+            id: 13, 
+            img: "/images/bac6637ae5da07d6.jpg",
+            title: "Backpacks, Travel Bags...",   
+            discount: "Min 50%+Extra 5% Off",                 
+            products: "Crazy Low Prices!",
+        },
+        {
+            id: 14, 
+            img: "/images/11-sp7231-kraasa-green-original-imagb6n5smwxss7c.jpeg",
+            title: "Sparx, Kraasa & more",   
+            discount: "From ₹199+Extra10%off",                 
+            products: "Casual Shoes For Men's",
+        },
+        {
+            id: 15, 
+            img: "/images/m-23771-0164-levi-s-original-imag5bh93bxyfz6y.jpeg",
+            title: "Sleepwear",   
+            discount: "From ₹199",                 
+            products: "Dreambe, Claura & more",
+        },
+        {
+            id: 16, 
+            img: "/images/m-ss18kap016-orange-anmi-original-imafejhvztgs8gmh.jpeg",
+            title: "Anmi, Divastri & More",   
+            discount: "From ₹199+Extra10%Off",                 
+            products: "Sarees, Kurtas & More",
+        },
+        {
+            id: 17, 
+            img: "/images/gm4-1-flipkart-smartbuy-original-imafzypshvrdxgd8.jpeg",
+            title: "Electrical Hardware",   
+            discount: "From ₹99",                 
+            products: "Best Selling",
+        },
+        
+    ];
+     
+    const list_container1 = document.getElementById("content_body1");
+
+    function renderlist1(content1){
+        const list1 = document.createElement("div");
+        list1.innerHTML = `<div class="content_box">                          
+                          <a href="">
+                            <div class="content_img">
+                              <img src=${content1.img} height="150px" width="147px">
+                            </div>
+                            <div class="content_details_1">${content1.title}</div>
+                            <div class="content_discount">${content1.discount}</div>
+                            <div class="content_details_2">${content1.products}</div>
+                          </a>
+                          </div>`;
+
+        return list1;
+    }
+
+    for(let i = 0; i < container1_list.length; i++){
+        currentElement1 = container1_list[i];
+
+        const newElement1 = renderlist1(currentElement1);
+        list_container1.appendChild(newElement1);
+    }     
+
+    const container2_list = [
+        {
+            id: 21, 
+            img: "/images/10-sx0677g-sparx-turkeyblueblack-original-imag5mcfzuvssh8y.jpeg",
+            title: "Season's Best Seller",   
+            discount: "From 299",                 
+            products: "Men's Casual Shoes, Sandals..",
+        },
+        {
+            id: 22, 
+            img: "/images/cj0291-100nike-10-nike-white-black-flash-crimson-oracle-aqua-original-imafzfg4srdt4s5y.jpeg",
+            title: "Nike, ADIDAS, Puma..",   
+            discount: "Up to 60% Off",                 
+            products: "Running Shoes",
+        },
+        {
+            id: 23, 
+            img: "/images/9-10-years-k-2-curly-tales-original-imag4yxnwgkgqux5.jpeg",
+            title: "Girls' Clothing",   
+            discount: "Under ₹999",                 
+            products: "Flying Machine, UCB & more",
+        },
+        {
+            id: 24, 
+            img: "/images/6-pns8563412-robbie-jones-white-original-imag48by38jyp5hz.jpeg",
+            title: "Best Selling Footwear",   
+            discount: "30-60% Off",                 
+            products: "Men's Sneakers",
+        },
+        {
+            id: 25, 
+            img: "/images/m-hljk000297-highlander-original-imafhhbqevhdastj.jpeg",
+            title: "Denim Jackets",   
+            discount: "Upto 65% Off",                 
+            products: "Must Haves!",
+        },
+        {
+            id: 26, 
+            img: "/images/57b64c251e5af10e.jpg",
+            title: "Cool Cargos",   
+            discount: "Up to 60% Off",                 
+            products: "Grab or Gone!",
+        },
+        {
+            id: 27, 
+            img: "/images/8-ldg17-8-adidas-ftwwht-ftwwht-hireye-original-imag4hzvyxmdt5cv.jpeg",
+            title: "ADIDAS",   
+            discount: "Min 40% Off",                 
+            products: "Women's Footwear1",
+        },
+        
+    ];
+     
+    const list_container2 = document.getElementById("content_body2");
+
+    function renderlist2(content2){
+        const list2 = document.createElement("div");
+        list2.innerHTML = `<div class="content_box">                          
+                          <a href="">
+                            <div class="content_img">
+                              <img src=${content2.img} height="150px" width="147px">
+                            </div>
+                            <div class="content_details_1">${content2.title}</div>
+                            <div class="content_discount">${content2.discount}</div>
+                            <div class="content_details_2">${content2.products}</div>
+                          </a>
+                          </div>`;
+
+        return list2;
+    }
+
+    for(let i = 0; i < container2_list.length; i++){
+        currentElement2 = container2_list[i];
+
+        const newElement2 = renderlist2(currentElement2);
+        list_container2.appendChild(newElement2);
+    } 
+
+    const container3_list = [
+        {
+            id: 31, 
+            img: "/images/anklet.jpeg",
+            title: "Anklets",   
+            discount: "From ₹99",                 
+            products: "Shining Diva, Charms...",
+        },
+        {
+            id: 32, 
+            img: "/images/free-sl071-c-senslife-original-imafa6zenpnykmdu.jpeg",
+            title: "Night Dresses & Nighties",   
+            discount: "Min 70% Off",                 
+            products: "Klamotten, Kanika & more",
+        },
+        {
+            id: 33, 
+            img: "/images/hil49-7-adidas-blue-original-imafxbjmzrxszngg.jpeg",
+            title: "ADIDAS, PUMA, Asian..",   
+            discount: "Up to 60% Off",                 
+            products: "Walking Shoes",
+        },
+        {
+            id: 34, 
+            img: "/images/shorts.jpeg",
+            title: "Boy's Shorts",   
+            discount: "Min. 40% Off",                 
+            products: "PUMA, Allen solly & more",
+        },
+        {
+            id: 35, 
+            img: "/images/flying.jpeg",
+            title: "Flying Machine, Allen Solly..",   
+            discount: "Min 50% Off",                 
+            products: "Polo T-Shirts",
+        },
+        {
+            id: 36, 
+            img: "/images/popular_argo.jpeg",
+            title: "Popular Cargos",   
+            discount: "Up to 60% Off",                 
+            products: "Grab or Gone!",
+        },
+        {
+            id: 37, 
+            img: "/images/cap.jpeg",
+            title: "Premium Caps",   
+            discount: "Up to 50% Off",                 
+            products: "U.S.P.A., Adidas...",
+        },
+        
+    ];
+     
+    const list_container3 = document.getElementById("content_body3");
+
+    function renderlist3(content3){
+        const list3 = document.createElement("div");
+        list3.innerHTML = `<div class="content_box">                          
+                          <a href="">
+                            <div class="content_img">
+                              <img src=${content3.img} height="150px" width="147px">
+                            </div>
+                            <div class="content_details_1">${content3.title}</div>
+                            <div class="content_discount">${content3.discount}</div>
+                            <div class="content_details_2">${content3.products}</div>
+                          </a>
+                          </div>`;
+
+        return list3;
+    }
+
+    for(let i = 0; i < container3_list.length; i++){
+        currentElement3 = container3_list[i];
+
+        const newElement3 = renderlist3(currentElement3);
+        list_container3.appendChild(newElement3);
+    } 
      
 </script>
