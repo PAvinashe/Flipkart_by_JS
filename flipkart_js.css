@@ -274,13 +274,15 @@ body{
     background-color: #fff;
     border-bottom: 1px grey;
     display: flex;
-    flex-direction: row;  
-    flex-wrap: wrap;  
+    flex-direction: row;    
     justify-content: space-evenly;
     align-items: center;
     text-align: center;   
-    
+    overflow-x: scroll;
 }
+#item_list::-webkit-scrollbar { 
+    width: 0 !important; 
+}    
 
 .item{
     height: 100%;
@@ -292,10 +294,15 @@ body{
     padding: 4px 12px;
 }
 
+.item:hover p{
+    color: #2874f0;
+}
+
+
 .item p{
     font-size: 14px;
     font-weight: 500;
-    line-height: 12px;
+    line-height: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     color: rgb(88, 85, 85);     
 
@@ -304,6 +311,7 @@ body{
 .item .image{
     width: 64px;
     height: 64px;
+
 }
 
 .main_page{

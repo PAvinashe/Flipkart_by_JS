@@ -734,8 +734,10 @@ Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms an
     function renderlist(content){
         const list = document.createElement("div");
         list.innerHTML = `<div class="item">
-                          <img class="image" src=${content.img} />
-                          <p>${content.title}</p>
+                            <a href="/category.html">
+                              <img class="image" src=${content.img} />
+                              <p>${content.title}</p>
+                            </a>
                           </div>`;
 
         return list;
